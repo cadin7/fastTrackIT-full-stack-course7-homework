@@ -57,7 +57,7 @@ public class RestaurantService {
 
     private Restaurant getRestaurantOrElseThrow(Long restaurantId) {
         return repository.findById(restaurantId)
-                .orElseThrow(() -> new ResourceNotFoundException("Couldn't find " + "restaurant with ID: " + restaurantId));
+                .orElseThrow(() -> new ResourceNotFoundException("Couldn't find restaurant with ID: " + restaurantId));
     }
 
     @SneakyThrows
